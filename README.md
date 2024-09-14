@@ -44,6 +44,14 @@ The result should be two csv files:
 1. pep_< date >.csv containing a list with numbers, names and current statuses of all peps.
 2. status_summary_< date >.csv containing a list of statuses and their counts among all the peps in descending order with a total.
 
+## uv
+The project can be initialized with uv.
+```bash
+# after moving to a project's directory
+uv sync
+uv run scrapy crawl pep
+```
+
 ## Author
 Please feel free to contact me with any questions or feedback:
 
