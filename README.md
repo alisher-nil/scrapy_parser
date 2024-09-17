@@ -13,44 +13,46 @@ This is a project that utilizes Scrapy to parse PEP (Python Enhancement Proposal
 - [Author](#author)
 
 ## Installation
-
+### basic
 1. Clone the repository:
-
-    ```bash
-    git clone https://github.com/alisher-nil/scrapy_parser_pep.git
-    ```
-
+```bash
+git clone https://github.com/alisher-nil/scrapy_parser_pep.git
+```
 2. Navigate to the project directory:
-
-    ```bash
-    cd scrapy_parser_pep
-    ```
-
+```bash
+cd scrapy_parser_pep
+```
+3. Create virtual environment
+```bash
+python -m venv .venv
+```
+4. Update pip
+```bash
+python -m pip install --upgrade pip
+```
 3. Install the required dependencies:
-
-    ```bash
-    pip install -r requirements.txt
-    ```
-
+```bash
+pip install -r requirements.txt
+```
+### uv
+The project can be initialized with [uv](https://docs.astral.sh/uv/).
+```bash
+# after moving to a project's directory
+uv sync
+```
 ## Usage
 
 To run the PEP parser, use the following command from the project directory:
 
 ```bash
 scrapy crawl pep
+# or with uv
+uv run scrapy crawl pep
 ```
 
 The result should be two csv files:
 1. pep_< date >.csv containing a list with numbers, names and current statuses of all peps.
 2. status_summary_< date >.csv containing a list of statuses and their counts among all the peps in descending order with a total.
-
-## uv
-The project can be initialized with uv.
-```bash
-# after moving to a project's directory
-uv sync
-uv run scrapy crawl pep
-```
 
 ## Author
 Please feel free to contact me with any questions or feedback:
